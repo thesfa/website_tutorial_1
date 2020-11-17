@@ -1,0 +1,168 @@
+/* We use grid for the entire page except for the nav bar, which uses flexbox*/
+
+/* Master styles*/
+body {
+	margin: 0px;
+	font-family: 'Source Sans Pro', Lato, sans-serif;
+	line-height: 1.5;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+/* Nav styles*/
+.nav-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 38px;
+	letter-spacing: 1px;
+}
+
+.left-side {
+	display: flex;
+}
+
+.nav-wrapper > .left-side > div {
+	margin-right: 20px;
+	font-size: 1em;
+	text-transform:  uppercase;
+}
+
+.nav-link-wrapper {
+	height: 22px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+	color: #8a8a8a;
+	text-decoration: none;
+	transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+	border-bottom: 2px solid black;
+}
+
+.nav-link-wrapper a:hover {
+	color: black;
+}
+
+.active-nav-link {
+	border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+	color: black;
+}
+
+/* Portfolio styles*/
+.portfolio-items-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+	position: relative;
+}
+
+
+.portfolio-img-background {
+	height: 350px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: none;
+	filter: brightness(90%);
+}
+
+.img-text-wrapper {
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-direction: column; /*center items left-to-right (horizontally) within container*/
+	justify-content: center; /*center items top-to-bottom (vertically) within container*/
+	align-items: center;
+	height: 100%;
+	text-align: center;
+	padding: 0 60px;
+	font-weight: 400;
+}
+
+.img-text-wrapper .subtitle {
+	transition: 1s;
+	color: transparent;
+}
+
+.img-text-wrapper .subtitle h3 {
+	font-size: 1.3em;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.img-text-wrapper:hover .subtitle {
+	/*font-weight: 600;*/
+	color: white;
+}
+
+.img-darken {
+	transition: 0.75s;
+	filter: brightness(30%);
+}
+
+.img-lighten {
+	transition: 0.75s;
+	filter: brightness(100%);
+}
+
+.logo-wrapper img{
+	width: 50%;
+	margin-bottom: 20px;
+}
+
+/*Button styles*/
+.subscribe {
+	width: 100px;
+	margin: 50px auto;
+
+}
+
+.button {
+	background-color: lightseagreen;
+	border-radius: 5px;
+	color: white;
+	display: inline;
+	padding: 20px;
+	margin: 30px;
+	text-align: center;
+	text-decoration: none;
+	font-style: uppercase;
+	font-size: 16px;
+	transition-duration: 0.75s;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: white;
+	color: lightseagreen;
+}
+
+/*About page styles*/
+.two-column-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+	width: 100%;
+}
+
+.profile-content-wrapper {
+	padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+	color: lightseagreen;
+}
